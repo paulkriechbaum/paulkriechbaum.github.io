@@ -1,0 +1,292 @@
+
+html
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul Kriechbaum – Deutschtraining für Unternehmen in Salzburg</title>
+    <style>
+        /* Grundlegendes Design & Farben */
+        :root {
+            --hauptfarbe: #1e3a8a;    /* Vertrauensvolles Dunkelblau */
+            --akzentfarbe: #f59e0b;   /* Warmes Gelb/Orange für Buttons */
+            --hintergrund: #f8fafc;   /* Helles, freundliches Grau-Weiß */
+            --textfarbe: #1e293b;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--hintergrund);
+            color: var(--textfarbe);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        header {
+            background-color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--hauptfarbe);
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--textfarbe);
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--hauptfarbe);
+        }
+
+        /* Kopfbereich (Hero) */
+        .hero {
+            background-color: var(--hauptfarbe);
+            color: white;
+            text-align: center;
+            padding: 5rem 10%;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 680px;
+            margin: 0 auto 2rem auto;
+            opacity: 0.95;
+        }
+
+        .btn {
+            background-color: var(--akzentfarbe);
+            color: #1e293b;
+            padding: 12px 28px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Allgemeine Abschnitte */
+        section {
+            padding: 4rem 10%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: var(--hauptfarbe);
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Kurs-Karten */
+        .kurse-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .karte {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--hauptfarbe);
+        }
+
+        .karte h3 {
+            margin-top: 0;
+            color: var(--hauptfarbe);
+        }
+
+        /* Über mich */
+        .ueber-mich {
+            background-color: white;
+            border-radius: 10px;
+            padding: 3rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .badge {
+            background-color: #e0e7ff;
+            color: var(--hauptfarbe);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* Kontakt */
+        .kontakt {
+            text-align: center;
+            background-color: #e2e8f0;
+            border-radius: 10px;
+            padding: 3rem;
+        }
+
+        .kontakt a {
+            color: var(--hauptfarbe);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .kontakt a:hover {
+            text-decoration: underline;
+        }
+
+        /* Fußzeile & Impressum */
+        footer {
+            text-align: center;
+            padding: 2.5rem 10%;
+            background-color: var(--textfarbe);
+            color: white;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+
+        details {
+            max-width: 700px;
+            margin: 1rem auto 0 auto;
+            text-align: left;
+            background-color: rgba(255, 255, 255, 0.08);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            color: var(--akzentfarbe);
+        }
+
+        .impressum-inhalt {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: #cbd5e1;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Paul Kriechbaum</div>
+        <nav>
+            <a href="#angebote">Firmenkurse</a>
+            <a href="#ueber-mich">Über mich</a>
+            <a href="#kontakt">Kontakt</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Praxisnahes Deutschtraining für Unternehmen in Salzburg</h1>
+        <p>Maßgeschneiderte Firmenkurse für Anfänger und Fortgeschrittene – persönlicher Präsenzunterricht direkt bei Ihnen im Betrieb, im Einzel- oder Gruppentraining.</p>
+        <a href="#kontakt" class="btn">Unverbindlich anfragen</a>
+    </div>
+
+    <section id="angebote">
+        <h2>Mein Kursangebot für Betriebe</h2>
+        <div class="kurse-grid">
+            <div class="karte">
+                <h3>Anfänger & Grundlagen</h3>
+                <p>Schneller Einstieg in die deutsche Sprache für neue internationale Mitarbeiterinnen und Mitarbeiter. Wir erarbeiten wichtige Alltagssituationen und betriebliche Grundbegriffe von Grund auf.</p>
+            </div>
+            <div class="karte">
+                <h3>Fortgeschrittene & Berufssprache</h3>
+                <p>Sichere Kommunikation im Arbeitsalltag, im Team und mit Kundinnen und Kunden. Ideal zur Vertiefung von Wortschatz, Ausdruck und fließendem Sprechen.</p>
+            </div>
+            <div class="karte">
+                <h3>Einzel- oder Gruppenunterricht</h3>
+                <p>Flexibler Präsenzunterricht direkt vor Ort in Ihrem Unternehmen in Salzburg und Umgebung – individuell abgestimmt auf das Sprachniveau und die Arbeitszeiten Ihres Teams.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="ueber-mich">
+        <div class="ueber-mich">
+            <h2>Über mich</h2>
+            <p>Mein Name ist <strong>Paul Kriechbaum</strong>. Als <strong>Volksschuloberlehrer i. R.</strong> bringe ich jahrzehntelange pädagogische Erfahrung, Geduld und ein feines Gespür dafür mit, wie Menschen Sprachen nachhaltig und mit Freude lernen.</p>
+            <p>Seit vier Jahren bin ich als freier Sprachtrainer für eine renommierte Salzburger Sprachschule tätig. Dabei unterrichte ich regelmäßig Mitarbeiterinnen und Mitarbeiter in <strong>internationalen technischen Unternehmen</strong> sowie in der <strong>Salzburger Hotellerie</strong>. Mir ist wichtig, dass der Unterricht lebendig, praxisnah und im persönlichen Kontakt stattfindet.</p>
+            <div class="highlights">
+                <span class="badge">Volksschuloberlehrer i. R.</span>
+                <span class="badge">4 Jahre Erfahrung in Firmenkursen</span>
+                <span class="badge">Technik & Hotellerie</span>
+                <span class="badge">100 % Präsenzunterricht</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="kontakt">
+            <h2>Kontakt & Terminvereinbarung</h2>
+            <p>Sie suchen einen erfahrenen Deutschtrainer für Ihr Unternehmen in Salzburg? Ich freue mich auf Ihre Nachricht oder Ihren Anruf für ein persönliches Gespräch.</p>
+            <p>
+                <strong>E-Mail:</strong> <a href="mailto:paulkriechbaum@ymail.com">paulkriechbaum@ymail.com</a><br>
+                <strong>Mobil:</strong> <a href="tel:+436763578337">0676 357 83 37</a>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Paul Kriechbaum – Deutschtraining Salzburg</p>
+        <details>
+            <summary>Impressum & Datenschutz anzeigen</summary>
+            <div class="impressum-inhalt">
+                <p><strong>Informationspflicht laut § 5 E-Commerce-Gesetz (ECG) und Offenlegungspflicht laut § 25 Mediengesetz:</strong></p>
+                <p>
+                    Paul Kriechbaum<br>
+                    Sprachtraining & Deutschkurse für Unternehmen<br>
+                    Hermann-Köhl-Straße 1<br>
+                    5020 Salzburg, Österreich
+                </p>
+                <p>
+                    <strong>Kontakt:</strong><br>
+                    Telefon: +43 676 357 83 37<br>
+                    E-Mail: paulkriechbaum@ymail.com
+                </p>
+                <p>
+                    <strong>Datenschutzhinweis:</strong><br>
+                    Diese Website verwendet keine Cookies und keine Analyse-Tools. Wenn Sie per E-Mail oder Telefon Kontakt aufnehmen, werden Ihre angegebenen Daten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen gespeichert. Diese Daten werden nicht ohne Ihre Einwilligung weitergegeben.
+                </p>
+            </div>
+        </details>
+    </footer>
+
+</body>
+</html>
+
+       
+        
+         
